@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Agentation } from 'agentation'
 import BriefingPage from './pages/BriefingPage'
 import EvidencePage from './pages/EvidencePage'
 import PortfolioPage from './pages/PortfolioPage'
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      {process.env.NODE_ENV === 'development' && <Agentation />}
     </BrowserRouter>
   )
 }
