@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-sans: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto,
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --font-display: "BM JUA", sans-serif;
+
+  /* Brand & semantic colors */
+  --color-primary: #04c584;
+  --color-primary-hover: #10df99;
+  --color-mint-tint: #f3fdfa;
+
+  --color-canvas: #ffffff;
+  --color-foreground: #2b2b2b;
+  --color-body: #434444;
+  --color-muted: #7b7b7b;
+  --color-placeholder: #999999;
+  --color-disabled: #acacac;
+  --color-on-primary: #ffffff;
+
+  --color-surface-alt: #fbfbfb;
+  --color-surface-neutral: #f5f5f5;
+  --color-hairline: #e1e1e1;
+
+  --color-error: #fe493d;
+  --color-error-soft: #ff8a84;
+  --color-warning: #fd8700;
+  --color-warning-deep: #f56200;
+  --color-info: #0099ff;
+
+  /* Spacing — use for p/m/gap only. Do NOT use max-w-sm/md/lg (Tailwind v4 conflict) */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-base: 1rem;    /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-xxl: 3rem;     /* 48px */
+  --spacing-section: 4rem; /* 64px */
+
+  /* Border radius — 2px as dominant radius per design system */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-soft: 0 1px 1px rgba(0, 0, 0, 0.08);
+  --shadow-standard: 0 2px 5px rgba(0, 0, 0, 0.12);
+  --shadow-elevated: 0 4px 9px rgba(0, 0, 0, 0.15);
+  --shadow-modal: 0 17px 50px rgba(0, 0, 0, 0.19);
+}
+
+@layer base {
+  :root {
+    font-family: var(--font-sans);
+    color: var(--color-body);
+    background-color: var(--color-canvas);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
